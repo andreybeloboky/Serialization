@@ -1,8 +1,8 @@
 import java.io.Serializable;
 
 public abstract class Animal implements Serializable {
-    String name;
-    int age;
+    private String name;
+    private int age;
 
     public Animal(String name, int age) {
         this.name = name;
