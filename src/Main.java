@@ -19,7 +19,7 @@ public class Main {
                 oos.writeObject(value);
             }
         } catch (FileNotFoundException e) {
-            throw new RuntimeException(e);
+            throw new UsersException("Something to wrong",  e.fillInStackTrace());
         }
     }
 
@@ -31,7 +31,7 @@ public class Main {
                 System.out.println(obj.getName());
             }
         } catch (Exception e) {
-            e.fillInStackTrace();
+            throw new UsersException("Something to wrong",  e.fillInStackTrace());
         }
     }
 }
